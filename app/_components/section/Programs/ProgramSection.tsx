@@ -6,6 +6,9 @@ const Programs = () => {
   console.log(programs);
   return (
     <section>
+      <h2 className={styles.programTitle}>
+        Why <span className={styles.programSpan}>Grow Kinesis</span>?
+      </h2>
       <div className={`container ${styles.programsContainer}`}>
         {programs.map((program) => (
           <Card
