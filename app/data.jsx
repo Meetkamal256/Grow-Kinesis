@@ -2,7 +2,7 @@ import illustration1 from "./images/illustration1.png";
 import illustration2 from "./images/illustration2.png";
 import illustration3 from "./images/illustration3.png";
 
-const programs = [
+export const programs = [
   {
     id: 1,
     title: "Fitness tailored to you",

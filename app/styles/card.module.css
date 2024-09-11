@@ -1,0 +1,24 @@
+.cardContainer {
+  padding: 64px 40px 64px 40px;
+  border: 2px dotted var(--blue-color);
+  max-width: fit-content;
+  text-align: center;
+  margin-bottom: 80px;
+  border-radius: 24px;
+
+}
+
+.cardTitle {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.cardInfo {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
