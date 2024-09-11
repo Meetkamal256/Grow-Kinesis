@@ -16,7 +16,7 @@ const Hero = () => {
         <Button className={styles.button}>Join the movement </Button>
         <img
           src="images/heroImage.png"
-          alt="illustration-img"
+          alt="hero-img"
           width={972}
           height={598}
         />
