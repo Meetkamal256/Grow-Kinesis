@@ -1,18 +1,37 @@
 .navbar {
-    padding-left: 69.25px;
-    padding-top: 32px;
-    margin-bottom: 80px
+  display: flex;
+  padding-left: 69.25px;
+  padding-top: 32px;
+  margin-bottom: 80px;
 }
-
-
 
 .logoContainer {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .logoLink {
   display: flex;
-  align-items: center; 
-  text-decoration: none; 
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 45.95px;
+  height: 45.95px;
+}
+
+@media screen and (max-width: 600px) {
+  .logoImage {
+    width: 26.26px;
+    height: 26.26px;
+  }
+  
+  .logoText {
+
+  }
+  
+  .navbar {
+    justify-content: center;
+  }
 }

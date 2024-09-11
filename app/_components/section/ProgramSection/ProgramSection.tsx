@@ -1,6 +1,6 @@
 import { programs } from "../../../data";
 import Card from "../../Card/Card";
-import styles from "@/app/_components/section/Programs/ProgramSection.module.css";
+import styles from "@/app/_components/section/ProgramSection/ProgramSection.module.css";
 
 const Programs = () => {
   console.log(programs);
