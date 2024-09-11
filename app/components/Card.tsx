@@ -2,14 +2,13 @@ import styles from "../styles/card.module.css";
 import Image from "next/image";
 
 interface CardProps {
-  id: number;
   title: string;
   info: string;
   image: string;
 }
 
 const Card = (props: CardProps) => {
-  const { id, title, info, image } = props;
+  const { title, info, image } = props;
   return (
     <article className={styles.cardContainer}>
       <h4 className={styles.cardTitle}>{title}</h4>

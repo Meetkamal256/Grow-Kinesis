@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 
 :root {
-  --gray-color: #EDEFF2;
+  --gray-color: #edeff2;
   --dark-color: #242526;
-  --blue-color: #1769FF;
+  --blue-color: #1769ff;
   --white: #ffff;
-  
+
   /* --container-width-lg: 1300px;
   --container-width-md: 720px;
   
@@ -14,7 +14,7 @@
 
 body {
   background: #ffff;
- font-family: "Instrument Sans", sans-serif;
+  font-family: "Instrument Sans", sans-serif;
 }
 
 *,
@@ -33,8 +33,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-/* .container {
-  max-width: var(--container-width-lg);
-  margin: 0 auto;
-} */
+.container {
+  margin-inline: 64px;
+}

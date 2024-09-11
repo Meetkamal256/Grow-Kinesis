@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section id="hero">
+    <section>
       <WaitListBadge />
       <div className={styles.heroContainer}>
         <h1 className={styles.heroText}>Fitness made easy, just for you</h1>
@@ -14,8 +14,8 @@ const Hero = () => {
           here.
         </p>
         <Button className={styles.button}>Join the movement </Button>
-        <img
-          src="images/heroImage.png"
+        <Image
+          src="/images/heroImage.png"
           alt="hero-img"
           width={972}
           height={598}
