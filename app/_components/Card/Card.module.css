@@ -21,3 +21,8 @@
   line-height: 36px;
   letter-spacing: -1px;
 }
+
+.cardImage {
+  width: 100%;
+  height: auto;
+}
