@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 :root {
+  --gray-color: #edeff2;
+  --dark-color: #242526;
+  --pinkisk-color: #ec1c4e;
+  --white: #ffff;
   
+  /* --container-width-lg: 1300px;
+  --container-width-md: 720px;
+  
+  --container-padding: 16px; */
 }
 
 body {
@@ -25,3 +33,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* .container {
+  max-width: var(--container-width-lg);
+  margin: 0 auto;
+} */

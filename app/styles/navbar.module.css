@@ -1,0 +1,18 @@
+.navbar {
+    padding-left: 69.25px;
+    padding-top: 32px;
+    margin-bottom: 80px
+}
+
+
+
+.logoContainer {
+  display: flex;
+  align-items: center; 
+}
+
+.logoLink {
+  display: flex;
+  align-items: center; 
+  text-decoration: none; 
+}

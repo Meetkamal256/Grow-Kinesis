@@ -1,10 +1,12 @@
-import Image from "next/image";
-import { Navbar } from "./components/nav/Navbar";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import WaitListBadge from "./components/WaitListBadge";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
-    </div>
+      <Hero />
+    </>
   );
 }
