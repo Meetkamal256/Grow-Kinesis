@@ -1,0 +1,15 @@
+.button {
+  background: var(--blue-color);
+  padding: 16px 36px 16px 36px;
+  color: #fff;
+  border-radius: 80px;
+  gap: 12px;
+}
+
+.buttonVariant {
+  background-color: #fff !important;
+  border-radius: 80px !important;
+  gap: 12px;
+  color: var(--blue-color);
+  padding: 16px 36px 16px 36px;
+}
