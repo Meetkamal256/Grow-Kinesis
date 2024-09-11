@@ -1,4 +1,4 @@
-import styles from "../styles/waitListBadge.module.css";
+import styles from "@/app/_components/WaistListBadge/WaitListBadge.module.css";
 import Image from "next/image";
 
 const WaitListBadge = () => (

@@ -1,4 +1,4 @@
-import styles from "../styles/card.module.css";
+import styles from "@/app/_components/Card/Card.module.css";
 import Image from "next/image";
 
 interface CardProps {

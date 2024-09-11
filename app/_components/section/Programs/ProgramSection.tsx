@@ -1,6 +1,6 @@
-import styles from "../styles/programs.module.css";
-import { programs } from "./../data";
-import Card from "./Card";
+import { programs } from "../../../data";
+import Card from "../../Card/Card";
+import styles from "@/app/_components/section/Programs/ProgramSection.module.css";
 
 const Programs = () => {
   console.log(programs);

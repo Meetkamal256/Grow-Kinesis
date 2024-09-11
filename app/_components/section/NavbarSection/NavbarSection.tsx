@@ -1,4 +1,4 @@
-import styles from "../styles/navbar.module.css";
+import styles from "../../section/NavbarSection/NavbarSection.module.css";
 import Link from "next/link";
 import Image from "next/image";
 

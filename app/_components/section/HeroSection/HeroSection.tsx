@@ -1,6 +1,6 @@
-import styles from "../styles/hero.module.css";
-import Button from "./Button";
-import WaitListBadge from "./WaitListBadge";
+import Button from "../../Button/Button";
+import WaitListBadge from "../../WaistListBadge/WaitListBadge";
+import styles from "@/app/_components/section/HeroSection/HeroSection.module.css";
 import Image from "next/image";
 
 const Hero = () => {

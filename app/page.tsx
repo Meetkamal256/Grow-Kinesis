@@ -1,7 +1,6 @@
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Programs from "./components/Programs";
-import WaitListBadge from "./components/WaitListBadge";
+import Hero from "./_components/section/HeroSection/HeroSection";
+import Navbar from "./_components/section/NavbarSection/NavbarSection";
+import Programs from "./_components/section/Programs/ProgramSection";
 
 export default function Home() {
   return (
