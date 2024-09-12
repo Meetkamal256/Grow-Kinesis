@@ -5,7 +5,7 @@ const WaitListBadge = () => (
   <div className={styles.badgeContainer}>
     <div className={styles.badgeText}>
       Approx. 500 active users
-      <img src="images/avatars.png" alt="avatars" width={72} height={24} />
+      <Image src="/images/avatars.png" alt="avatars" width={72} height={24} className={styles.avatarImg} />
       Awaiting launch
     </div>
   </div>

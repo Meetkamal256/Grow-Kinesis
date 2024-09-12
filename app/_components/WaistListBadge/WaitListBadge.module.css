@@ -21,3 +21,21 @@
   line-height: 24px;
   white-space: nowrap;
 }
+
+@media screen and (max-width: 600px) {
+  .badgeContainer {
+    padding: 12px 20px 12px 20px;
+  }
+  
+  .badgeText {
+    gap: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.2;
+  }
+  
+  .avatarImg {
+    width: 40px;
+    height: 16px;
+  }
+}
