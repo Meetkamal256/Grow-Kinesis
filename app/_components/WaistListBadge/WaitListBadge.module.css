@@ -26,10 +26,10 @@
   .badgeContainer {
     padding: 12px 20px 12px 20px;
   }
-  
+
   .badgeText {
     gap: 4px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 16px;
     letter-spacing: -0.2;
   }
@@ -37,5 +37,18 @@
   .avatarImg {
     width: 40px;
     height: 16px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 374px) {
+  .badgeContainer {
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .badgeText {
+    gap: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.2;
   }
 }
