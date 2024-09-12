@@ -4,6 +4,9 @@
   color: #fff;
   border-radius: 80px;
   gap: 12px;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: -1px;
 }
 
 .buttonVariant {
@@ -12,4 +15,13 @@
   gap: 12px;
   color: var(--blue-color);
   padding: 16px 36px 16px 36px;
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    padding: 16px 32px 16px 32px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.2;
+  }
 }

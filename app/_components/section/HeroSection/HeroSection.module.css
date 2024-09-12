@@ -16,9 +16,33 @@
 }
 
 .heroParagraph {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 36px;
-    letter-spacing: -1px;
-    margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .heroText {
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 48px;
+  }
+
+  .heroParagraph {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    text-align: center;
+  }
+
+  .heroImg {
+    width: 390px;
+    height: 390px;
+    /* height: auto; */
+    object-fit: contain;
+    margin-top: 16px;
+  }
 }

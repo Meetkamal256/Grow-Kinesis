@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section>
       <WaitListBadge />
-      <div className={styles.heroContainer}>
+      <div className={`container ${styles.heroContainer}`}>
         <h1 className={styles.heroText}>Fitness made easy, just for you</h1>
         <p className={styles.heroParagraph}>
           Your journey to a stronger, healthier, and more confident you starts
@@ -19,6 +19,7 @@ const Hero = () => {
           alt="hero-img"
           width={972}
           height={598}
+          className={styles.heroImg}
         />
       </div>
     </section>

@@ -36,3 +36,9 @@ a {
 .container {
   margin-inline: 64px;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-inline: 16px;
+  }
+}
