@@ -23,8 +23,8 @@
 
 @media screen and (max-width: 600px) {
   .logoImage {
-    width: 26.26px;
-    height: 26.26px;
+    width: 35.26px;
+    height: 35.26px;
   }
   
   .logoText {
@@ -34,5 +34,6 @@
   
   .navbar {
     justify-content: center;
+    padding-left: 0;
   }
 }

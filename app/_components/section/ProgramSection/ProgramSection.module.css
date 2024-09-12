@@ -20,7 +20,8 @@
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .programsContainer {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
+    justify-content: center;
   }
 }
 
@@ -29,7 +30,7 @@
     grid-template-columns: 1fr;
     gap: 8px;
   }
-
+  
   .programTitle {
     font-size: 30px;
     letter-spacing: -1px;
