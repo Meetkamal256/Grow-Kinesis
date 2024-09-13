@@ -1,3 +1,4 @@
+import { title } from "process";
 import { programs } from "../../../data";
 import Card from "../../Card/Card";
 import styles from "@/app/_components/section/ProgramSection/ProgramSection.module.css";
@@ -12,6 +13,7 @@ const Programs = () => {
       <div className={`container ${styles.programsContainer}`}>
         {programs.map((program) => (
           <Card
+            key={title}
             title={program.title}
             info={program.info}
             image={program.image}
