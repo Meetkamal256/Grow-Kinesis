@@ -6,6 +6,7 @@
   padding: 80px;
   border-radius: 32px;
   margin-bottom: 80px;
+  white-space: nowrap;
 }
 
 .contactImage {
