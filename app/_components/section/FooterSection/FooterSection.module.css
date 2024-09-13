@@ -62,23 +62,23 @@
   .logoContainer {
     justify-content: center;
   }
-  
+
   .logoImage {
     width: 35.26px;
     height: 35.26px;
   }
-  
+
   .logoText {
     width: 79.19px;
     height: 9.76px;
   }
-  
+
   .footerContent {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .copyright {
     font-size: 12px;
     font-weight: 500;
@@ -87,7 +87,7 @@
     text-align: left;
     white-space: nowrap;
   }
-  
+
   .socialLinks {
     font-size: 15px;
     font-weight: 500;
