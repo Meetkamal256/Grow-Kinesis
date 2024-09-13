@@ -66,18 +66,18 @@
     margin-inline: 16px;
     padding: 40px 24px 40px 24px;
   }
-
+  
   .contactImage {
     display: none;
   }
-
+  
   .contactSection .title {
     font-size: 24px;
     line-height: 40px;
     letter-spacing: -1px;
     text-align: center;
   }
-
+  
   .contactSection .description {
     font-size: 15px;
     font-weight: 500;
