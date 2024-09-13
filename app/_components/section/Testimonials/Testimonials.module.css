@@ -1,0 +1,144 @@
+.sectionTitle {
+  font-weight: 600;
+  text-align: center;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+  color: var(--dark-color);
+}
+
+.sectionSpan {
+  color: var(--blue-color);
+}
+
+.sectionParagraph {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-color);
+  line-height: 36px;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.testimonialsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 auto 80px auto;
+}
+
+.video {
+  color: #18181a;
+  object-fit: contain;
+}
+
+.reviewContainer {
+  background: #f2f6ff;
+  padding: 24px;
+  border-radius: 24px;
+  margin-right: 10px;
+}
+
+.reviewParagraph {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--dark-color);
+  letter-spacing: -1px;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -1px;
+  color: var(--dark-color);
+}
+
+.profession {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: var(--blue-color);
+  margin-bottom: 12px;
+}
+
+
+
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  .testimonialsContainer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0 auto 80px auto;
+  }
+  
+  .video {
+    width: 358px;
+    height: 214px;
+    margin: 0 auto;
+  }
+  
+  .sectionTitle {
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  
+  .sectionParagraph {
+    margin-bottom: 24px;
+  }
+
+  .sectionSpan {
+    font-size: 24px;
+  }
+
+  .reviewContainer {
+    background: #f2f6ff;
+    padding: 16px;
+    border-radius: 12px;
+    margin-inline: 16px;
+  }
+
+  .reviewParagraph {
+    font-size: 12px;
+    letter-spacing: -0.2px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .info {
+    display: flex;
+    gap: 12px;
+  }
+
+  .name {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .profession {
+    font-size: 8px;
+    line-height: 12px;
+    letter-spacing: -0.2px;
+  }
+}

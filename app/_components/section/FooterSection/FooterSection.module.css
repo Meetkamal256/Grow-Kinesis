@@ -1,0 +1,104 @@
+.footerContainer {
+  padding: 32px 64px 64px 64px;
+  margin: 0 auto;
+}
+
+.line {
+  border: 1px solid var(--gray-color);
+  width: 100%;
+  font-weight: 900;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 45.95px;
+  height: 45.95px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -1px;
+  text-align: left;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 32px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.email {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: var(--blue-color);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .logoContainer {
+    justify-content: center;
+  }
+
+  .logoImage {
+    width: 35.26px;
+    height: 35.26px;
+  }
+
+  .logoText {
+    width: 79.19px;
+    height: 9.76px;
+  }
+
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .copyright {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .socialLinks {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.20000000298023224px;
+    white-space: nowrap;
+  }
+
+  .email {
+    font-family: Instrument Sans;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: -0.20000000298023224px;
+    color: var(--blue-color);
+  }
+}

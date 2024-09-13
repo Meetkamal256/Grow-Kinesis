@@ -22,3 +22,27 @@ export const programs = [
     image: "/images/illustration3.png",
   },
 ];
+
+export const reviews = [
+  {
+    id: 1,
+    info: "I've been working with GrowKinesis for a long while now, and the experience has been nothing short of transformative. Their innovative approach to growth strategies has helped my athleticism reach new heights. The team is incredibly knowledgeable and responsive, always ready to provide insights and support. I appreciate how they tailor their services to meet my specific needs, making me feel outstanding in the process. I can't wait to see what the future holds as we continue this journey together! I highly recommend them to anyone looking for top-notch service!",
+    avatar: "/images/avatar1.png",
+    name: "Michael Okiki",
+    profession: "-Professional Basketball Player (National team PG)",
+  },
+  {
+    id: 4,
+    info: "I've been working with GrowKinesis for a long while now, and the experience has been nothing short of transformative. Their innovative approach to growth strategies has helped my athleticism reach new heights. The team is incredibly knowledgeable and responsive, always ready to provide insights and support. I appreciate how they tailor their services to meet my specific needs, making me feel outstanding in the process. I can't wait to see what the future holds as we continue this journey together! I highly recommend them to anyone looking for top-notch service!",
+    avatar: "/images/avatar1.png",
+    name: "Michael Okiki",
+    profession: "-Professional Basketball Player (National team PG)",
+  },
+  {
+    id: 3,
+    info: "I've been working with GrowKinesis for a long while now, and the experience has been nothing short of transformative. Their innovative approach to growth strategies has helped my athleticism reach new heights. The team is incredibly knowledgeable and responsive, always ready to provide insights and support. I appreciate how they tailor their services to meet my specific needs, making me feel outstanding in the process. I can't wait to see what the future holds as we continue this journey together! I highly recommend them to anyone looking for top-notch service!",
+    avatar: "/images/avatar1.png",
+    name: "Michael Okiki",
+    profession: "-Professional Basketball Player (National team PG)",
+  },
+];
