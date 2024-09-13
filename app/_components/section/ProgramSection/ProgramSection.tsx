@@ -12,8 +12,6 @@ const Programs = () => {
       <div className={`container ${styles.programsContainer}`}>
         {programs.map((program) => (
           <Card
-            key={program.id}
-            id={program.id}
             title={program.title}
             info={program.info}
             image={program.image}
