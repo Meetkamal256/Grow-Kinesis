@@ -22,6 +22,7 @@
   line-height: 48px;
   letter-spacing: -2px;
   margin-bottom: 12px;
+  whitespace: nowrap;
 }
 
 .contactSection .description {

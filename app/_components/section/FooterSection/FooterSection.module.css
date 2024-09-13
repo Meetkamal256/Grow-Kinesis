@@ -62,38 +62,40 @@
   .logoContainer {
     justify-content: center;
   }
-
+  
   .logoImage {
     width: 35.26px;
     height: 35.26px;
   }
-
+  
   .logoText {
     width: 79.19px;
     height: 9.76px;
   }
-
+  
   .footerContent {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-
+  
   .copyright {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: -0.2px;
     text-align: left;
     white-space: nowrap;
   }
-
+  
   .socialLinks {
     font-size: 15px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: -0.20000000298023224px;
     white-space: nowrap;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
   .email {
