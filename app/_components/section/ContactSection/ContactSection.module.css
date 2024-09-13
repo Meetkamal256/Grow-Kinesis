@@ -6,14 +6,13 @@
   padding: 80px;
   border-radius: 32px;
   margin-bottom: 80px;
-  white-space: nowrap;
+
 }
 
 .contactImage {
   object-fit: cover;
   width: 100%;
   height: auto;
-  border-radius: inherit; /* Match the container’s border radius */
 }
 
 .contactSection .title {

@@ -91,7 +91,7 @@
   .video {
     width: 358px;
     height: 214px;
-    margin: 0 auto;
+
   }
   
   .sectionTitle {
@@ -110,14 +110,14 @@
   .sectionSpan {
     font-size: 24px;
   }
-
+  
   .reviewContainer {
     background: #f2f6ff;
     padding: 16px;
     border-radius: 12px;
     margin-inline: 16px;
   }
-
+  
   .reviewParagraph {
     font-size: 12px;
     letter-spacing: -0.2px;
