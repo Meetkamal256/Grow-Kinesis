@@ -8,8 +8,8 @@ const Testimonials = () => {
         Join Over <span className={styles.sectionSpan}>500</span> happy members!
       </h2>
       <p className={styles.sectionParagraph}>
-        Join a community of approximately 500 active users who’ve unlocked their
-        potential with Grow Kinesis. Are you ready to be next?
+        Join a community of approximately 500 active users who&apos;ve unlocked
+        their potential with Grow Kinesis. Are you ready to be next?
       </p>
       <div className={`container ${styles.testimonialsContainer}`}>
         <Image
@@ -21,14 +21,14 @@ const Testimonials = () => {
         />
         <div className={styles.reviewContainer}>
           <p className={styles.reviewParagraph}>
-            &quot;I've been working with GrowKinesis for a long while now, and
-            the experience has been nothing short of transformative. Their
+            &quot;I&apos;ve been working with GrowKinesis for a long while now,
+            and the experience has been nothing short of transformative. Their
             innovative approach to growth strategies has helped my athleticism
             reach new heights. The team is incredibly knowledgeable and
             responsive, always ready to provide insights and support. I
             appreciate how they tailor their services to meet my specific needs,
-            making me feel outstanding in the process. I can't wait to see what
-            the future holds as we continue this journey together! I highly
+            making me feel outstanding in the process. I can&apos;t wait to see
+            what the future holds as we continue this journey together! I highly
             recommend them to anyone looking for top-notch service!&quot;
           </p>
           <div className={styles.info}>
@@ -41,19 +41,24 @@ const Testimonials = () => {
             <div>
               <h4 className={styles.name}>Michael Okiki</h4>
               <p className={styles.profession}>
-                -Professional Basketball Player (National team PG)
+                - Professional Basketball Player (National team PG)
               </p>
-              <Image src="/images/divider.png" alt="" width={326} height={2} />
+              <Image
+                src="/images/divider.png"
+                alt="divider"
+                width={326}
+                height={2}
+              />
               <div className={styles.btnContainer}>
                 <Image
                   src="/images/rightarrow.png"
-                  alt=""
+                  alt="right-arrow"
                   width={34}
                   height={34}
                 />
                 <Image
                   src="/images/rightarrow.png"
-                  alt=""
+                  alt="right-arrow"
                   width={34}
                   height={34}
                 />
