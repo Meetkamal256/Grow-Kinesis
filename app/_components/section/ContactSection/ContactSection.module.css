@@ -63,6 +63,7 @@
   .contactSection {
     grid-template-columns: 1fr;
     margin-inline: 16px;
+    padding: 40px 24px 40px 24px;
   }
 
   .contactImage {
