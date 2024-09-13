@@ -1,6 +1,5 @@
 .footerContainer {
   padding: 32px 64px 64px 64px;
-  margin: 0 auto;
 }
 
 .line {
@@ -57,6 +56,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .footerContainer {
+    padding: 16px 16px 32px 16px;
+  }
   .logoContainer {
     justify-content: center;
   }
