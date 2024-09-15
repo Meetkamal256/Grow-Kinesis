@@ -75,6 +75,8 @@
 
   .footerContent {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 15px;
   }
@@ -89,7 +91,7 @@
   }
 
   .socialLinks {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: -0.20000000298023224px;
@@ -100,7 +102,7 @@
 
   .email {
     font-family: Instrument Sans;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 16px;
     letter-spacing: -0.20000000298023224px;
     color: var(--blue-color);

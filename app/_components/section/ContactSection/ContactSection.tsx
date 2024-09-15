@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <section>
       <div className={styles.contactSection}>
-        <div>
+        <div className={styles.contactLeft}>
           <h2 className={styles.title}>Ready to Transform?</h2>
           <p className={styles.description}>
             Don’t wait another day to start your journey. Join our waiting list
@@ -19,7 +19,7 @@ const ContactSection = () => {
             />
             <input
               type="email"
-              placeholder="kindly type your email"
+              placeholder="kindly type your email address"
               className={styles.input}
             />
             <input
@@ -32,7 +32,7 @@ const ContactSection = () => {
             Join The waitlist
           </button>
         </div>
-        <div>
+        <div className={styles.contactRight}>
           <Image
             src="/images/contactimage.png"
             alt="contact-img"

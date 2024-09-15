@@ -91,7 +91,7 @@
   .video {
     width: 358px;
     height: 214px;
-
+  
   }
   
   .sectionTitle {
@@ -106,7 +106,7 @@
   .sectionParagraph {
     margin-bottom: 24px;
   }
-
+  
   .sectionSpan {
     font-size: 24px;
   }
@@ -124,12 +124,12 @@
     line-height: 20px;
     text-align: center;
   }
-
+  
   .info {
     display: flex;
     gap: 12px;
   }
-
+  
   .name {
     font-size: 16px;
     line-height: 24px;
