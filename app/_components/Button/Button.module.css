@@ -7,20 +7,22 @@
   font-size: 20px;
   line-height: 36px;
   letter-spacing: -1px;
+  cursor: pointer;
 }
 
 .buttonVariant {
-  background-color: #fff !important;
-  border-radius: 80px !important;
+  background-color: #fff;
+  border-radius: 80px;
   gap: 12px;
   color: var(--blue-color);
   padding: 16px 36px 16px 36px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
   .button {
     padding: 16px 32px 16px 32px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
     letter-spacing: -0.2;
   }

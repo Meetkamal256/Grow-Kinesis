@@ -4,7 +4,7 @@ import Card from "../../Card/Card";
 import styles from "@/app/_components/section/ProgramSection/ProgramSection.module.css";
 
 const Programs = () => {
-  console.log(programs);
+  // console.log(programs);
   return (
     <section>
       <h2 className={styles.programTitle}>

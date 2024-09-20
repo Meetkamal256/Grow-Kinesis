@@ -23,22 +23,31 @@
 }
 
 .testimonialsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: 0 auto 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 26px;
+}
+
+.testimonialsContainer .imageContainer {
+  flex-basis: 66.67%;
+  flex-grow: 1;
+  max-width: 914px;
 }
 
 .video {
-  color: #18181a;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .reviewContainer {
+  flex-basis: 33.33%; /* Takes one-third of the available space */
+  flex-grow: 1; /* Allows the review container to grow proportionally */
   background: #f2f6ff;
   padding: 24px;
   border-radius: 24px;
-  margin-right: 10px;
+  overflow: hidden;
 }
 
 .reviewParagraph {
@@ -73,8 +82,10 @@
   margin-bottom: 12px;
 }
 
-
-
+.reviewContainer img {
+  max-width: 100%; /* Ensure the divider image scales within the container */
+  margin-bottom: 16px;
+}
 .btnContainer {
   display: flex;
   gap: 10px;
@@ -83,17 +94,19 @@
 
 @media screen and (max-width: 600px) {
   .testimonialsContainer {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin: 0 auto 80px auto;
+    flex-direction: column; /* Stack image and review on top of each other */
+    gap: 16px; /* Add some vertical spacing */
   }
-  
+
+  .imageContainer,
+  .reviewContainer {
+    flex-basis: 100%;
+  }
+
   .video {
-    width: 358px;
-    height: 214px;
-  
+    height: auto;
   }
-  
+
   .sectionTitle {
     font-weight: 600;
     text-align: center;
@@ -102,34 +115,42 @@
     letter-spacing: -1px;
     margin-bottom: 12px;
   }
-  
+
+  .reviewContainer {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
   .sectionParagraph {
     margin-bottom: 24px;
   }
-  
+
   .sectionSpan {
     font-size: 24px;
   }
-  
-  .reviewContainer {
-    background: #f2f6ff;
-    padding: 16px;
-    border-radius: 12px;
-    margin-inline: 16px;
-  }
-  
+
   .reviewParagraph {
     font-size: 12px;
     letter-spacing: -0.2px;
     line-height: 20px;
     text-align: center;
   }
-  
+
   .info {
     display: flex;
     gap: 12px;
   }
-  
+
+  .avatarImg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btnContainer {
+    display: flex;
+    gap: 10px;
+  }
+
   .name {
     font-size: 16px;
     line-height: 24px;
