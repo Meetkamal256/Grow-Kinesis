@@ -1,33 +1,38 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Testimonials.module.css";
 import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
 import { reviews } from "@/app/data";
 
-type ExpandedReviews = {
-  [key: number]: boolean;
-};
-
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
-  const [expandedReviews, setExpandedReviews] = useState<ExpandedReviews>({});
+  const [expandedReviews, setExpandedReviews] = useState<{
+    [key: number]: boolean;
+  }>({});
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); 
+    };
+    
+    handleResize(); // Check on initial load
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
   const prevReviewHandler = () => {
-    setIndex((prev) => prev - 1);
-    if (index <= 0) {
-      setIndex(reviews.length - 1);
-    }
+    setIndex((prev) => (prev <= 0 ? reviews.length - 1 : prev - 1));
   };
-
+  
   const nextReviewHandler = () => {
-    setIndex((prev) => prev + 1);
-    if (index >= reviews.length - 1) {
-      setIndex(0);
-    }
+    setIndex((prev) => (prev >= reviews.length - 1 ? 0 : prev + 1));
   };
-
+  
   const handleToggleReview = (id: number) => {
     const updatedReviews = { ...expandedReviews, [id]: !expandedReviews[id] };
     setExpandedReviews(updatedReviews);
@@ -55,7 +60,7 @@ const Testimonials = () => {
             className={styles.video}
           />
         </div>
-
+        
         <div
           className={`${styles.reviewContainer} ${
             expandedReviews[index] ? styles.expanded : ""
@@ -67,7 +72,9 @@ const Testimonials = () => {
             }`}
             onClick={() => handleToggleReview(index)}
           >
-            {expandedReviews[index] ? info : info.substring(0, 350) + "..."}
+            {expandedReviews[index] || isMobile
+              ? info
+              : info.substring(0, 350) + "..."}
           </p>
 
           <div className={styles.info}>

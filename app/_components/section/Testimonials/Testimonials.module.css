@@ -25,7 +25,6 @@
 .testimonialsContainer {
   display: flex;
   justify-content: center;
-  align-items: stretch;
   gap: 26px;
 }
 
@@ -115,14 +114,12 @@
 
 .arrowIcon {
   font-size: 40px;
+  background: #f2f6ff;
+  color: #292d32;
 }
 
 .leftArrow {
-  color: #d3d3d3;
-}
-
-.rightArrow {
-  color: #292d32;
+  color: #a6b1c0;
 }
 
 @media screen and (max-width: 600px) {
