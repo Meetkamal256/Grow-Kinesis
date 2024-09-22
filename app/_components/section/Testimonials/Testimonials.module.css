@@ -95,6 +95,18 @@
   max-width: 100%; /* Ensure the divider image scales within the container */
   margin-bottom: 16px;
 }
+
+.avatarContainer {
+  width: 48px;
+  height: 48px;
+}
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 .btnContainer {
   display: flex;
   gap: 10px;
@@ -106,7 +118,7 @@
 }
 
 .leftArrow {
-  color: #646566;
+  color: #d3d3d3;
 }
 
 .rightArrow {
@@ -122,6 +134,11 @@
   .imageContainer,
   .reviewContainer {
     flex-basis: 100%;
+  }
+
+  .reviewContainer.expanded {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   .video {
@@ -162,20 +179,6 @@
     gap: 12px;
   }
 
-  .avatarImg {
-    width: 36px;
-    height: 36px;
-  }
-
-  .btnContainer {
-    display: flex;
-    gap: 10px;
-  }
-
-  .arrowIcon {
-    font-size: 30px;
-  }
-
   .name {
     font-size: 16px;
     line-height: 24px;
@@ -186,5 +189,25 @@
     font-size: 8px;
     line-height: 12px;
     letter-spacing: -0.2px;
+  }
+
+  .avatarContainer {
+    width: 36px;
+    height: 36px;
+  }
+  .avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  .btnContainer {
+    display: flex;
+    gap: 10px;
+  }
+
+  .arrowIcon {
+    font-size: 30px;
   }
 }

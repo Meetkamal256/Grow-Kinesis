@@ -9,25 +9,32 @@ import { reviews } from "@/app/data";
 type ExpandedReviews = {
   [key: number]: boolean;
 };
+
 const Testimonials = () => {
+  const [index, setIndex] = useState(0);
   const [expandedReviews, setExpandedReviews] = useState<ExpandedReviews>({});
 
-  const handleToggleReview = (id: number) => {
-    // Create a copy of the current expandedReviews state
-    const updatedReviews = { ...expandedReviews };
-
-    // Check if the review with the given ID is currently expanded or not
-    if (updatedReviews[id]) {
-      // If it's already expanded, set it to false (collapse it)
-      updatedReviews[id] = false;
-    } else {
-      // If it's not expanded, set it to true (expand it)
-      updatedReviews[id] = true;
+  const prevReviewHandler = () => {
+    setIndex((prev) => prev - 1);
+    if (index <= 0) {
+      setIndex(reviews.length - 1);
     }
+  };
 
-    // Update the state with the modified expandedReviews object
+  const nextReviewHandler = () => {
+    setIndex((prev) => prev + 1);
+    if (index >= reviews.length - 1) {
+      setIndex(0);
+    }
+  };
+
+  const handleToggleReview = (id: number) => {
+    const updatedReviews = { ...expandedReviews, [id]: !expandedReviews[id] };
     setExpandedReviews(updatedReviews);
   };
+
+  const { info, avatar, name, profession } = reviews[index];
+
   return (
     <section className="container">
       <h2 className={styles.sectionTitle}>
@@ -48,66 +55,59 @@ const Testimonials = () => {
             className={styles.video}
           />
         </div>
-        {reviews.map((review) => (
-          <div
-            key={review.id}
-            className={`${styles.reviewContainer} ${
-              expandedReviews[review.id] ? styles.expanded : ""
-            }`}
-          >
-            <p
-              className={`${styles.reviewParagraph} ${
-                expandedReviews[review.id] ? styles.expanded : ""
-              }`}
-              onClick={() => handleToggleReview(review.id)}
-            >
-              {expandedReviews[review.id]
-                ? review.info
-                : review.info.substring(0, 350) + "..."}
-            </p>
 
-            <div className={styles.info}>
+        <div
+          className={`${styles.reviewContainer} ${
+            expandedReviews[index] ? styles.expanded : ""
+          }`}
+        >
+          <p
+            className={`${styles.reviewParagraph} ${
+              expandedReviews[index] ? styles.expanded : ""
+            }`}
+            onClick={() => handleToggleReview(index)}
+          >
+            {expandedReviews[index] ? info : info.substring(0, 350) + "..."}
+          </p>
+
+          <div className={styles.info}>
+            <div className={styles.avatarContainer}>
               <Image
-                src="/images/avatar1.png"
-                alt="avatar1-img"
+                src={avatar}
+                alt="avatar-img"
                 width={48}
                 height={48}
                 className={styles.avatarImg}
               />
-              <div>
-                <h4 className={styles.name}>Michael Okiki</h4>
-                <p className={styles.profession}>
-                  - Professional Basketball Player (National team PG)
-                </p>
-              </div>
             </div>
-            <Image
-              src="/images/divider.png"
-              alt="divider"
-              width={326}
-              height={2}
-            />
-            <div className={styles.btnContainer}>
+
+            <div>
+              <h4 className={styles.name}>{name}</h4>
+              <p className={styles.profession}>{profession}</p>
+            </div>
+          </div>
+          <Image
+            src="/images/divider.png"
+            alt="divider"
+            width={326}
+            height={2}
+          />
+          <div className={styles.btnContainer}>
+            <button onClick={prevReviewHandler}>
               <IoIosArrowDropleft
                 className={`${styles.arrowIcon} ${styles.leftArrow}`}
               />
+            </button>
+            <button onClick={nextReviewHandler}>
               <IoIosArrowDropright
                 className={`${styles.arrowIcon} ${styles.rightArrow}`}
               />
-            </div>
+            </button>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Testimonials;
-
-// Handle toggling the expanded state of each review
-// const handleToggleReview = (id: number) => {
-//   setExpandedReviews((prev) => ({
-//     ...prev,
-//     [id]: !prev[id], // Toggle the specific review's expanded state
-//   }));
-// };
