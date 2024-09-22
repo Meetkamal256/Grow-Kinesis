@@ -37,8 +37,7 @@
 
 .video {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 544px;
 }
 
 .reviewContainer {
@@ -47,7 +46,15 @@
   background: #f2f6ff;
   padding: 24px;
   border-radius: 24px;
-  overflow: hidden;
+  max-height: 544px;
+  overflow-y: hidden;
+  transition: max-height 0.3s ease;
+  cursor: pointer;
+}
+
+.reviewContainer.expanded {
+  overflow-y: auto;
+  max-height: 544px;
 }
 
 .reviewParagraph {
@@ -57,6 +64,8 @@
   letter-spacing: -1px;
   line-height: 36px;
   margin-bottom: 16px;
+  max-height: 900px;
+  transition: max-height 0.3s ease, overflow 0.3s ease;
 }
 
 .info {
@@ -90,6 +99,18 @@
   display: flex;
   gap: 10px;
   justify-content: flex-end;
+}
+
+.arrowIcon {
+  font-size: 40px;
+}
+
+.leftArrow {
+  color: #646566;
+}
+
+.rightArrow {
+  color: #292d32;
 }
 
 @media screen and (max-width: 600px) {
@@ -149,6 +170,10 @@
   .btnContainer {
     display: flex;
     gap: 10px;
+  }
+
+  .arrowIcon {
+    font-size: 30px;
   }
 
   .name {
