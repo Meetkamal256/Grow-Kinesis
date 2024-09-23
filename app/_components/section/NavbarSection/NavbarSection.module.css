@@ -21,19 +21,58 @@
   height: 45.95px;
 }
 
+/* Large laptops */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .navbar {
+    padding-left: 40px;
+    padding-top: 30px;
+    justify-content: flex-start;
+  }
+
+  .logoImage {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logoText {
+    width: 138px;
+    height: auto;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-top: 24px;
+  }
+
+  .logoImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoText {
+    width: 120px;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 16px;
+  }
   .logoImage {
     width: 35.26px;
     height: 35.26px;
   }
-  
+
   .logoText {
     width: 79.19px;
     height: 9.76px;
-  }
-  
-  .navbar {
-    justify-content: center;
-    padding-left: 0;
   }
 }
