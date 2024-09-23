@@ -23,6 +23,41 @@
   margin-bottom: 16px;
 }
 
+/* Large Laptop Styles */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .heroText {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  .heroParagraph {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .heroImg {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .heroText {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .heroParagraph {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .heroImg {
+    width: 85%;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .heroText {
     font-weight: 600;
