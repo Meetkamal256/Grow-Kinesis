@@ -59,7 +59,7 @@
 }
 @media screen and (max-width: 600px) {
   .badgeContainer {
-    padding: 12px 20px; /* Padding for mobile */
+    padding: 12px 20px;
   }
 
   .badgeText {
@@ -70,7 +70,7 @@
   }
 
   .avatarImg {
-    width: 40px;
+    width: 35px;
     height: auto;
   }
 }
