@@ -76,7 +76,7 @@ const Testimonials = () => {
               ? info
               : info.substring(0, 350) + "..."}
           </p>
-
+          
           <div className={styles.info}>
             <div className={styles.avatarContainer}>
               <Image
@@ -87,7 +87,7 @@ const Testimonials = () => {
                 className={styles.avatarImg}
               />
             </div>
-
+            
             <div>
               <h4 className={styles.name}>{name}</h4>
               <p className={styles.profession}>{profession}</p>
@@ -98,6 +98,7 @@ const Testimonials = () => {
             alt="divider"
             width={326}
             height={2}
+            className={styles.divider}
           />
           <div className={styles.btnContainer}>
             <button onClick={prevReviewHandler}>
