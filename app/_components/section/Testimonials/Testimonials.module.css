@@ -127,8 +127,6 @@
   color: #a6b1c0;
 }
 
-
-
 /* Media Query for Tablets/Small Laptops (1024px - 1280px) */
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   .sectionTitle {
@@ -136,13 +134,13 @@
     line-height: 44px;
     margin-bottom: 16px;
   }
-  
+
   .sectionParagraph {
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 48px;
   }
-  
+
   .testimonialsContainer {
     gap: 20px;
   }
@@ -151,29 +149,29 @@
     padding: 20px;
     border-radius: 16px;
   }
-  
+
   .reviewParagraph {
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -0.5px;
     margin-bottom: 16px;
   }
-  
+
   .name {
     font-size: 18px;
     line-height: 28px;
   }
-  
+
   .profession {
     font-size: 10px;
     line-height: 14px;
     letter-spacing: -0.1px;
   }
-  
+
   .btnContainer {
     justify-content: space-evenly;
   }
-
+  
   .arrowIcon {
     font-size: 36px;
   }
@@ -185,12 +183,12 @@
     flex-direction: column;
     gap: 24px;
   }
-
+  
   .imageContainer,
   .reviewContainer {
     flex-basis: 100%;
   }
-
+  
   .sectionTitle {
     font-size: 36px;
     line-height: 44px;
@@ -209,6 +207,11 @@
     padding: 20px;
     border-radius: 20px;
     margin: 0 auto;
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
   }
 
   .reviewParagraph {
