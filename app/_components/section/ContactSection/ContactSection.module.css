@@ -93,15 +93,15 @@
 /* Success message styling */
 .contactSection .success {
   background-color: #d1e7dd; /* Light green background */
-  color: #0f5132;           /* Dark green text */
+  color: #0f5132; /* Dark green text */
   border: 1px solid #0f5132; /* Dark green border */
 }
 
 /* Error message styling */
 .contactSection .error {
-  background-color: #f8d7da; /* Light red background */
-  color: #842029;            /* Dark red text */
-  border: 1px solid #842029; /* Dark red border */
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #842029;
 }
 
 /* Fade-out effect */
@@ -109,14 +109,82 @@
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+
+/* Large Laptop Styles (1025px - 1280px) */
+@media screen and (min-width: 1200px) and (max-width: 1280px) {
   .contactSection {
-    grid-template-columns: 1fr;
-    margin-inline: 16px;
-    padding: 40px 20px 40px 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+  }
+  .contactSection .contactRight {
+    position: absolute;
+    top: 125px;
+    left: 300px;
+    z-index: 9;
+  }
+
+  .contactImage {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    width: 750px;
   }
   .contactImage {
+    display: block; /* Show image on larger screens */
+  }
+
+  .contactSection .title {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: left;
+  }
+
+  .contactSection .description {
+    font-size: 20px;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .contactSection .input {
+    padding: 16px;
+  }
+
+  .contactSection .input::placeholder {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .contactSection {
+    padding: 60px;
+    grid-template-columns: 1fr;
+  }
+
+  .contactSection .contactRight {
     display: none;
+  }
+
+  .contactSection .contactImage {
+    display: none;
+  }
+
+  .contactSection .title {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .contactSection .description {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .contactSection .input {
+    padding: 14px;
+  }
+
+  .contactSection .input::placeholder {
+    font-size: 15px;
   }
 }
 
