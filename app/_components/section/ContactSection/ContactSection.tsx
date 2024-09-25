@@ -10,6 +10,12 @@ const ContactSection = () => {
     phone: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // success or error
@@ -24,46 +30,42 @@ const ContactSection = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error when user starts typing
   };
 
   // Validate form fields before submission
   const validateForm = () => {
+    let valid = true;
+    const newErrors = { name: "", email: "", phone: "" };
+
     // Check for empty fields or fields containing only whitespace
-    if (
-      !formData.name.trim() ||
-      !formData.email.trim() ||
-      !formData.phone.trim()
-    ) {
-      setMessage("All fields are required and cannot contain only spaces.");
-      setMessageType("error");
-      return false;
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required.";
+      valid = false;
+    } else if (!nameRegex.test(formData.name)) {
+      newErrors.name =
+        "Please enter a valid name (letters, spaces, and apostrophes only).";
+      valid = false;
     }
 
-    // Validate name (ensure it only contains letters, spaces, and apostrophes)
-    if (!nameRegex.test(formData.name)) {
-      setMessage(
-        "Please enter a valid name (letters, spaces, and apostrophes only)."
-      );
-      setMessageType("error");
-      return false;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+      valid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+      valid = false;
     }
 
-    // Validate email
-    if (!emailRegex.test(formData.email)) {
-      setMessage("Please enter a valid email address.");
-      setMessageType("error");
-      return false;
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+      valid = false;
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid phone number (10-15 digits).";
+      valid = false;
     }
 
-    // Validate phone number
-    if (!phoneRegex.test(formData.phone)) {
-      setMessage("Please enter a valid phone number (10-15 digits).");
-      setMessageType("error");
-      return false;
-    }
-
-    // All validations passed
-    return true;
+    setErrors(newErrors);
+    return valid;
   };
 
   // Handle form submission
@@ -78,7 +80,7 @@ const ContactSection = () => {
       setIsSubmitting(false);
       return;
     }
-
+    
     try {
       const response = await fetch("/api/submit", {
         method: "POST",
@@ -87,7 +89,7 @@ const ContactSection = () => {
         },
         body: JSON.stringify(formData),
       });
-
+      
       if (response.ok) {
         setMessage("You have successfully joined the waitlist!");
         setMessageType("success");
@@ -122,7 +124,7 @@ const ContactSection = () => {
           <h2 className={styles.title}>Ready to Transform?</h2>
           <p className={styles.description}>
             Don’t wait another day to start your journey. Join our waiting list
-            and get notified <strong>IMMEDIATELY</strong> our app launches.
+            and get notified <strong>IMMEDIATELY</strong> when our app launches.
           </p>
           <form className={styles.form} onSubmit={handleSubmit}>
             <input
@@ -132,8 +134,11 @@ const ContactSection = () => {
               className={styles.input}
               value={formData.name}
               onChange={handleInputChange}
-              required
             />
+            {errors.name && (
+              <span className={styles.inputError}>{errors.name}</span>
+            )}
+
             <input
               type="email"
               name="email"
@@ -141,8 +146,11 @@ const ContactSection = () => {
               className={styles.input}
               value={formData.email}
               onChange={handleInputChange}
-              required
             />
+            {errors.email && (
+              <span className={styles.inputError}>{errors.email}</span>
+            )}
+
             <input
               type="tel"
               name="phone"
@@ -150,8 +158,11 @@ const ContactSection = () => {
               className={styles.input}
               value={formData.phone}
               onChange={handleInputChange}
-              required
             />
+            {errors.phone && (
+              <span className={styles.inputError}>{errors.phone}</span>
+            )}
+
             <button
               className={styles.button}
               type="submit"

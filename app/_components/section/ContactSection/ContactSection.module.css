@@ -16,7 +16,7 @@
 
 .contactSection .contactRight {
   position: absolute;
-  top: 65px;
+  top: 67px;
   left: 430px;
   z-index: 9;
 }
@@ -66,18 +66,27 @@
 }
 
 .contactSection .button {
-  padding: 10px 36px 10px 36px;
+  padding: 10px 36px;
   border-radius: 80px;
   color: var(--blue-color);
+  background: #fff;
   font-size: 15px;
   font-weight: 600;
   line-height: 36px;
-  letter-spacing: -1px;
   text-align: left;
   cursor: pointer;
   max-width: fit-content;
 }
 
+/* Styling for individual error messages under each input field */
+.contactSection .inputError {
+  font-size: 14px;
+  color: #ff4d4d; /* Red color for error message */
+  margin-top: 4px;
+  display: block;
+}
+
+/* Main message container styles */
 .contactSection .message {
   padding: 12px;
   margin-top: 16px;
@@ -99,15 +108,14 @@
 
 /* Error message styling */
 .contactSection .error {
-  background-color: #f8d7da;
-  color: #842029;
-  border: 1px solid #842029;
+  background-color: #f8d7da; /* Light red background */
+  color: #842029; /* Dark red text */
+  border: 1px solid #842029; /* Dark red border */
 }
 
-/* Fade-out effect */
+/* Fade out effect for the message */
 .contactSection .fadeOut {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
 /* Large Laptop Styles (1025px - 1280px) */
