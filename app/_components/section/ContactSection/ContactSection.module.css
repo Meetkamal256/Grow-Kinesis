@@ -5,7 +5,7 @@
   background: linear-gradient(276.12deg, #000000 -34.97%, #1769ff 111.21%);
   padding: 80px;
   border-radius: 32px;
-  margin-bottom: 80px;
+  margin-bottom: 80px 80px 120px 80px;
   position: relative;
   margin-inline: 16px;
 }
@@ -84,6 +84,7 @@
   color: #ff4d4d; /* Red color for error message */
   margin-top: 4px;
   display: block;
+  min-height: 0px;
 }
 
 /* Main message container styles */
@@ -130,7 +131,7 @@
     left: 300px;
     z-index: 9;
   }
-
+  
   .contactImage {
     object-fit: cover;
     width: 100%;

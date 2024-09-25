@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../../Button/Button";
 import WaitListBadge from "../../WaistListBadge/WaitListBadge";
 import styles from "@/app/_components/section/HeroSection/HeroSection.module.css";
@@ -13,7 +14,10 @@ const Hero = () => {
           Your journey to a stronger, healthier, and more confident you starts
           here.
         </p>
-        <Button className={styles.button}>Join the movement </Button>
+        <Link href="#contact" scroll={true}>
+          <Button className={styles.button}>Join the movement</Button>
+        </Link>
+
         <Image
           src="/images/heroImage.png"
           alt="hero-img"

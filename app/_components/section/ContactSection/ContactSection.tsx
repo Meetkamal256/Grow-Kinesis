@@ -80,7 +80,7 @@ const ContactSection = () => {
       setIsSubmitting(false);
       return;
     }
-    
+
     try {
       const response = await fetch("/api/submit", {
         method: "POST",
@@ -89,7 +89,7 @@ const ContactSection = () => {
         },
         body: JSON.stringify(formData),
       });
-      
+
       if (response.ok) {
         setMessage("You have successfully joined the waitlist!");
         setMessageType("success");
@@ -118,7 +118,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section>
+    <section id="contact">
       <div className={styles.contactSection}>
         <div className={styles.contactLeft}>
           <h2 className={styles.title}>Ready to Transform?</h2>
