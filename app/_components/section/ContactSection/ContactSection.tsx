@@ -134,6 +134,7 @@ const ContactSection = () => {
               className={styles.input}
               value={formData.name}
               onChange={handleInputChange}
+              required
             />
             {errors.name && (
               <span className={styles.inputError}>{errors.name}</span>
@@ -146,6 +147,7 @@ const ContactSection = () => {
               className={styles.input}
               value={formData.email}
               onChange={handleInputChange}
+              required
             />
             {errors.email && (
               <span className={styles.inputError}>{errors.email}</span>
@@ -158,6 +160,7 @@ const ContactSection = () => {
               className={styles.input}
               value={formData.phone}
               onChange={handleInputChange}
+              required
             />
             {errors.phone && (
               <span className={styles.inputError}>{errors.phone}</span>

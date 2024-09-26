@@ -141,23 +141,23 @@
   .contactImage {
     display: block; /* Show image on larger screens */
   }
-
+  
   .contactSection .title {
     font-size: 48px;
     line-height: 48px;
     text-align: left;
   }
-
+  
   .contactSection .description {
     font-size: 20px;
     line-height: 36px;
     text-align: left;
   }
-
+  
   .contactSection .input {
     padding: 16px;
   }
-
+  
   .contactSection .input::placeholder {
     font-size: 16px;
   }
@@ -167,31 +167,31 @@
     padding: 60px;
     grid-template-columns: 1fr;
   }
-
+  
   .contactSection .contactRight {
     display: none;
   }
-
+  
   .contactSection .contactImage {
     display: none;
   }
-
+  
   .contactSection .title {
     font-size: 36px;
     line-height: 42px;
     text-align: center;
   }
-
+  
   .contactSection .description {
     font-size: 18px;
     line-height: 28px;
     text-align: center;
   }
-
+  
   .contactSection .input {
     padding: 14px;
   }
-
+  
   .contactSection .input::placeholder {
     font-size: 15px;
   }
@@ -203,18 +203,18 @@
     margin-inline: 16px;
     padding: 40px 24px 40px 24px;
   }
-
+  
   .contactImage {
     display: none;
   }
-
+  
   .contactSection .title {
     font-size: 24px;
     line-height: 40px;
     letter-spacing: -1px;
     text-align: center;
   }
-
+  
   .contactSection .description {
     font-size: 15px;
     font-weight: 500;
@@ -222,12 +222,12 @@
     letter-spacing: -0.20000000298023224px;
     text-align: center;
   }
-
+  
   .contactSection .input {
     border: 1px solid;
     padding: 12px;
   }
-
+  
   .contactSection .input::placeholder {
     font-size: 14px;
   }

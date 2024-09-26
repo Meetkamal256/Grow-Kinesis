@@ -17,7 +17,7 @@ const Hero = () => {
         <Link href="#contact" scroll={true}>
           <Button className={styles.button}>Join the movement</Button>
         </Link>
-
+        
         <Image
           src="/images/heroImage.png"
           alt="hero-img"
