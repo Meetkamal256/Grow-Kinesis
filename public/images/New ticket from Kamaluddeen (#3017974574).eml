@@ -1,0 +1,411 @@
+Delivered-To: meetkamal256@gmail.com
+Received: by 2002:a05:7010:d21:b0:3ee:2f5e:e679 with SMTP id fc33csp287568mdb;
+        Fri, 26 Jul 2024 00:29:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEofN7eqNhDFpBx2XLTaFcQIOCpxRExATRur/cF76m0VfvoV8h/18tIsdspPMHsVEbQkUA8
+X-Received: by 2002:a05:622a:45:b0:447:e381:9ad5 with SMTP id d75a77b69052e-44fe9160500mr48728601cf.5.1721978957524;
+        Fri, 26 Jul 2024 00:29:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1721978957; cv=none;
+        d=google.com; s=arc-20160816;
+        b=l4QEZ7jfrHDXTOEWFj51vChKMtmI3oYIX+xOK2p/XCdtLrEYNNmQl0Sdae5+RQ8Zsa
+         9huUvPkVy5yqWgjtkagJWuNwPjMQ0yIEc+S/uQVkKs2y0k1YTiTBKfS+m6yxAIDZdfIy
+         4nRX0IzNWRk+Cr+E1Vr+JQOECX4IJR7RB1IySjVlXVq3wou4vt8fpGx7HkTk5bDe2s/B
+         9Hbh3pWwIU+UBdK9h39wgtIF/gBMBBOoacybd9uZlGocApb2MdUJNQkIcFOnr8Hkuckn
+         dmzT0C8OaUasFozwiZvRN039LqRWn0h0U9TbK73s4GQu+QFn5B3cy8S0yuaYX8kvMK38
+         y57g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:subject:message-id:to:from:date:reply-to
+         :dkim-signature;
+        bh=ddvyk80M7NgfX3vVZnzbAGobOJRP7EH67wBDgDe4zZE=;
+        fh=qG2N5rB3mnJSZ6cC5WGhiYtGWfdee27hNMKR8wKXZTA=;
+        b=I2p024kxmFSY2zHqfnh/FpjLo5e6L/lgY4TY/MoDNC3WovOohqJRTVYewSSzqfV7Z+
+         C3S5ECXogAZXmtNx0yw+yhco1lUlFJ4MvULX3VMuaCwOCCTb2vhBaX3LHaktqYJjssZP
+         6KlWdk1tdAqDmEdmRr6g/Wwr8qKqCres69p0SjXjq/5Zc9JncM2+9H3huIDhNzSHsdHN
+         DlNOZQGeIbRzthWh4CoGiPEKiol1Lx1Z8g3i/EzpDzF7JXza3cAFkfbzH10vSWYfbSeH
+         P3NYudAK/YfpsjxFyWluTwUvU0QZAcP3hkGXZUGwr9MqCxE6bw3QNuV55FGyAqtcEeRd
+         8gLw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bf.hs-inbox.com header.s=hs2 header.b=jbpLVj7P;
+       spf=pass (google.com: domain of 1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com designates 54.174.61.29 as permitted sender) smtp.mailfrom="1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hs-inbox.com
+Return-Path: <1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com>
+Received: from pgg3t7.bf.hs-inbox.com (pgg3t7.bf.hs-inbox.com. [54.174.61.29])
+        by mx.google.com with ESMTPS id d75a77b69052e-44fe813719bsi32898881cf.144.2024.07.26.00.29.17
+        for <meetkamal256@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 26 Jul 2024 00:29:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com designates 54.174.61.29 as permitted sender) client-ip=54.174.61.29;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bf.hs-inbox.com header.s=hs2 header.b=jbpLVj7P;
+       spf=pass (google.com: domain of 1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com designates 54.174.61.29 as permitted sender) smtp.mailfrom="1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hs-inbox.com
+Received: by 172.16.182.102 with SMTP id a0cgfhxxtp4xciw9xo4hn1nefnmhhlsmff0fl2bfgsq;
+        Fri, 26 Jul 2024 07:29:17 GMT
+DKIM-Signature: v=1; s=hs2; d=bf.hs-inbox.com; 
+        i=@bf.hs-inbox.com; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ddvyk80M7NgfX3vVZnzbAGobOJRP7EH67wBDgDe4zZE=; 
+        b=jbpLVj7PAeRYh1R/DOMCf6u3dBDaGEhqYjYtvV/4XdnfcvdAWOjqW8XR2ymDeU
+         75kcd8BIVG+Wh3KvJKca+k2Ob+ARXiBIiuQw4m1PESmpCJ8MGA0j3wo0mXcIPTa
+         3uX88h10tSlC/CCBd5HssZoVSM02jTJOf0zimwQuixLJ1tfAbr4PBCardNg/RUZ
+         n2Q/tlh6Bn15S/vQCCGfbgm8gq93BFD9KSkD4S+wf0FtFbMplFrDJrmHOQ2WHd+
+         gfrdxnl8qCvCKi47iuYIZNJFth9JXealsKVK4PMBR6p+vj1bwbYzqNhogOGR6AV
+         AJuFMfMrlzfEMM3rAz5bqGA3Pd+Q==; q=dns/txt; t=1721978957; 
+        x=1722241757;
+Reply-To: "turing.com" <support-1@turing.com.hs-inbox.com>
+Return-Path: <1axbudak09qwa4pn9i9d1fb5j7m71x09zachf7-meetkamal256=gmail.com@bf.hs-inbox.com>
+X-HS-Cid: 1axe00fp7ns53qnxh8hzbmwk5tp3053tztscwn
+Date: Fri, 26 Jul 2024 03:29:17 -0400
+From: "turing.com" <support-1@turing.com.hs-inbox.com>
+To: meetkamal256@gmail.com
+Message-ID: <1721978956034.ac471654-ce9b-4c8a-8d3c-4241c28a4a1e@bf.hs-inbox.com>
+Subject: New ticket from Kamaluddeen (#3017974574)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_115228_1146507378.1721978957110"
+X-HS-Fax-Cid: 1cnhoe40o921s3bwznyppit5fu6lvd3prxhrcar3pncmac5b704xtkr78b4l9zoi67bf57s9z0r5pgi3ku2ufnns6cijag07gor625zk52cb23s3bem3rhepxb2fnbjbs0akf6
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+Feedback-ID: aeotpxd:ai:aibcvg:HubSpot
+
+------=_Part_115228_1146507378.1721978957110
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Kamaluddeen=E2=80=8B
+=09
+Thank you for reaching out to us and for investing time in our vetting proc=
+ess!
+=09
+Unfortunately, your process is blocked as you failed the Challenge on your =
+last attempt. After our AI evaluation of the Challenge, our technical team =
+did a manual review of your submission and evaluated that you=E2=80=99re no=
+t ready to proceed just yet.
+=09
+Please note that the manual review is currently not reflected in the platfo=
+rm UI. On your end, it will keep showing as passed but the process will be =
+blocked at the "pass the coding challenge" stage.=20
+Our technical team is aware and working to make the necessary adjustments s=
+oon. Thanks for your patience and understanding while we work on this.
+=09
+As per our guidelines, you can retake the Challenge after the cool-off peri=
+od of just 90 days, and with your zeal and proactive approach, we believe y=
+ou=E2=80=99ll be back with a bang!
+=09
+I=E2=80=99d love to help you pull up your sleeves =F0=9F=92=AA and kill it =
+in your next attempt. Here are some resources that might help you ace your =
+next attempt:=C2=A0
+- Coursera - https://www.coursera.org/learn/algorithmic-thinking-1 (https:/=
+/www.coursera.org/learn/algorithmic-thinking-1)
+- HackerRank - https://www.hackerrank.com/
+- Codility - https://app.codility.com/demo/take-sample-test/ (https://app.c=
+odility.com/demo/take-sample-test/)
+- Khan Acadamy - https://www.khanacademy.org/computing/computer-science/alg=
+orithms (https://www.khanacademy.org/computing/computer-science/algorithms)
+- Data structures and algorithms - https://leetcode.com (https://leetcode.c=
+om/)
+- System Design - https://github.com/donnemartin/system-design-primer (http=
+s://github.com/donnemartin/system-design-primer)
+- OOP & Design Patterns - https://www.youtube.com/playlist?list=3DPLF206E90=
+6175C7E07 (https://www.youtube.com/playlist?list=3DPLF206E906175C7E07)
+- Git - https://git-scm.com/book/en/v2 (https://git-scm.com/book/en/v2)
+=09
+Check out our YouTube video with tips to ace the challenge on your next att=
+empt, click here (https://youtu.be/laNU4Oh2AYU).
+=09
+Please reach out to us at support@turing.com after the cool-off period to r=
+etake your Challenge. =F0=9F=92=BB=C2=A0
+=09
+We really appreciate the interest you have shown and hope to see you soon.
+=09
+Sincerely,=C2=A0
+Tinuola
+
+--
+Turing Support Team
+
+On Thu, Jul 25, 2024 at 11:24 PM, "turing.com" <support-1@turing.com.hs-inb=
+ox.com> wrote:
+>Conversation transcript
+>
+>Kamaluddeen [11:17 PM]: I need to talk with a Specialist
+>Alan [11:17 PM]: What is your name?
+>Kamaluddeen [11:18 PM]: Kamaluddeen Muhammad
+>Alan [11:18 PM]: Can you describe your problem?=20
+>
+>I=E2=80=99ll use this information to submit a ticket to our team.=20
+>
+>Please add images, screenshots or videos to it, if possible. Be as detaile=
+d as possible.
+>Kamaluddeen [11:24 PM]: pls can you give me a chance to do the soft skills=
+ challenge again i wasnt able to complete it due to some unforseeable circu=
+mstance. I started it but was called away i also applied for the mistral AI=
+ and python developer job, i completed all turing coding challenges and als=
+o updated my turing profile. I would be really grateful if you could assist=
+ me with this. Looking forward to hearing from you Thank you very much
+>Kamaluddeen [11:24 PM]: [[Shared a file]]
+>Alan [11:24 PM]: Thank you, your ticket has been created!
+>
+>We'll get back to you in the next 24 hours within weekdays. Please don't g=
+enerate another chat or ticket about the same issue.
+>
+>And please don't fill out our feedback survey yet,  Once we have addressed=
+ your case, we will reopen this conversation to gather your valuable feedba=
+ck. :)
+
+------=_Part_115228_1146507378.1721978957110
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"hs_reply_wrap">=20
+   <div style=3D"font-family: Verdana;color: #130101;" dir=3D"auto" data-to=
+p-level=3D"true">=20
+    <p style=3D"margin:0;"><span style=3D"font-size: 11pt;">Hi Kamaluddeen=
+=E2=80=8B</span></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">Thank you for reaching out to us and for investing time in our vetting =
+process!</span></span></span></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">Unfortunately, your process is blocked as you failed the Challenge on y=
+our last attempt. After our AI evaluation of the Challenge, our technical t=
+eam did a manual review of your submission and evaluated that you=E2=80=99r=
+e not ready to proceed just yet.</span></span></span></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><strong><span style=3D"color: rgb(51, 51, 51);">=
+<span style=3D"font-size: 14.6667px;"><span style=3D"background-color: rgb(=
+255, 255, 255);">Please note that the manual review is currently not reflec=
+ted in the platform UI. </span></span></span></strong><span style=3D"color:=
+ rgb(51, 51, 51);"><span style=3D"font-size: 14.6667px;"><span style=3D"bac=
+kground-color: rgb(255, 255, 255);">On your end, it will keep showing as pa=
+ssed but the process will be blocked at the "pass the coding challenge" sta=
+ge. </span></span></span></p>=20
+    <p style=3D"margin:0;"><em><span style=3D"color: rgb(51, 51, 51);"><spa=
+n style=3D"font-size: 14.6667px;"><span style=3D"background-color: rgb(255,=
+ 255, 255);">Our technical team is aware and working to make the necessary =
+adjustments soon. Thanks for your patience and understanding while we work =
+on this.</span></span></span></em></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">As per our guidelines, you can retake the Challenge after the cool-off =
+period of just 90 days, and with your zeal and proactive approach, we belie=
+ve you=E2=80=99ll be back with a bang!</span></span></span></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">I=E2=80=99d love to help you pull up your sleeves =F0=9F=92=AA and kill=
+ it in your next attempt. Here are some resources that might help you ace y=
+our next attempt: </span></span></span></p>=20
+    <ul>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">Coursera -</span></span></span><a href=3D"https://www.coursera.org=
+/learn/algorithmic-thinking-1" target=3D"_blank"><span style=3D"font-size: =
+11pt;"> <span style=3D"background-color: rgb(255, 255, 255);">https://www.c=
+oursera.org/learn/algorithmic-thinking-1</span></span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">HackerRank -</span></span></span><span style=3D"font-size: 11pt;">=
+ </span><a href=3D"https://www.hackerrank.com/" target=3D"_blank"><span sty=
+le=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255)=
+;">https://www.hackerrank.com/</span></span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">Codility -</span></span></span><a href=3D"https://app.codility.com=
+/demo/take-sample-test/" target=3D"_blank"><span style=3D"font-size: 11pt;"=
+> <span style=3D"background-color: rgb(255, 255, 255);">https://app.codilit=
+y.com/demo/take-sample-test/</span></span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">Khan Acadamy -</span></span></span><a href=3D"https://www.khanacad=
+emy.org/computing/computer-science/algorithms" target=3D"_blank"><span styl=
+e=3D"font-size: 11pt;"> <span style=3D"background-color: rgb(255, 255, 255)=
+;">https://www.khanacademy.org/computing/computer-science/algorithms</span>=
+</span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">Data structures and algorithms -</span></span></span><a href=3D"ht=
+tps://leetcode.com/" target=3D"_blank"><span style=3D"font-size: 11pt;"> <s=
+pan style=3D"background-color: rgb(255, 255, 255);">https://leetcode.com</s=
+pan></span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">System Design -</span></span></span><a href=3D"https://github.com/=
+donnemartin/system-design-primer" target=3D"_blank"><span style=3D"font-siz=
+e: 11pt;"> <span style=3D"background-color: rgb(255, 255, 255);">https://gi=
+thub.com/donnemartin/system-design-primer</span></span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">OOP &amp; Design Patterns -</span></span></span><a href=3D"https:/=
+/www.youtube.com/playlist?list=3DPLF206E906175C7E07" target=3D"_blank"><spa=
+n style=3D"font-size: 11pt;"> <span style=3D"background-color: rgb(255, 255=
+, 255);">https://www.youtube.com/playlist?list=3DPLF206E906175C7E07</span><=
+/span></a></p></li>=20
+     <li><p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><sp=
+an style=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255=
+, 255);">Git -</span></span></span><a href=3D"https://git-scm.com/book/en/v=
+2" target=3D"_blank"><span style=3D"font-size: 11pt;"> <span style=3D"backg=
+round-color: rgb(255, 255, 255);">https://git-scm.com/book/en/v2</span></sp=
+an></a></p></li>=20
+    </ul>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">Check out our YouTube video with tips to ace the challenge on your next=
+ attempt,</span></span></span><span style=3D"font-size: 11pt;"> </span><a h=
+ref=3D"https://youtu.be/laNU4Oh2AYU" target=3D"_blank"><span style=3D"font-=
+size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255);">click he=
+re</span></span></a><span style=3D"font-size: 11pt;"><span style=3D"backgro=
+und-color: rgb(255, 255, 255);">.</span></span></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">Please reach out to us at <a href=3D"mailto:support@turing.com" target=
+=3D"_blank" rel=3D"noopener noreferrer">support@turing.com</a> after the co=
+ol-off period to retake your Challenge. =F0=9F=92=BB </span></span></span><=
+/p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">We really appreciate the interest you have shown and hope to see you so=
+on.</span></span></span></p>=20
+    <br>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">Sincerely, </span></span></span></p>=20
+    <p style=3D"margin:0;"><span style=3D"color: rgb(51, 51, 51);"><span st=
+yle=3D"font-size: 11pt;"><span style=3D"background-color: rgb(255, 255, 255=
+);">Tinuola</span></span></span></p>=20
+   </div>=20
+   <br>=20
+   <div class=3D"hs_signature">=20
+    <div>=20
+     <br>=20
+     <br> --=20
+     <br>=20
+     <strong>Turing </strong>Support Team=20
+    </div>=20
+    <br>=20
+    <figure style=3D"margin:0">=20
+     <a href=3D"https://www.turing.com/" target=3D"_blank"><img src=3D"http=
+s://help.turing.com/hubfs/Turing-Logo-FullLockup-Horizontal-May-12-2023-12-=
+56-40-7412-PM.png" width=3D"250" height=3D"52"></a>=20
+    </figure>=20
+    <br>=20
+   </div>=20
+   <div class=3D"hs_reply">=20
+    <br>=20
+    <div>
+      On Thu, Jul 25, 2024 at 11:24 PM, turing.com=20
+     <span dir=3D"ltr">&lt;<a href=3D"mailto:support-1@turing.com.hs-inbox.=
+com" target=3D"_blank">support-1@turing.com.hs-inbox.com</a>&gt;</span> wro=
+te:=20
+     <br>=20
+     <blockquote class=3D"hs_reply_quote" style=3D"margin:0 0 0 .8ex;border=
+-left:1px #ccc solid;padding-left:1ex">=20
+      <div>=20
+       <div style=3D"margin-bottom: 10px">
+         Conversation transcript=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Kamaluddeen</span><span style=3D"display: inline-blo=
+ck; margin: 0 5px">[11:17 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">I need to=
+ talk with a Specialist</span>=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Alan</span><span style=3D"display: inline-block; mar=
+gin: 0 5px">[11:17 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">=20
+         <div>
+           What is your name?=20
+         </div></span>=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Kamaluddeen</span><span style=3D"display: inline-blo=
+ck; margin: 0 5px">[11:18 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">=20
+         <div>
+           Kamaluddeen Muhammad=20
+         </div></span>=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Alan</span><span style=3D"display: inline-block; mar=
+gin: 0 5px">[11:18 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">=20
+         <div>
+           Can you describe your problem?=20
+         </div><br>=20
+         <div>
+           I=E2=80=99ll use this information=20
+          <strong>to submit a ticket to our team. </strong>=20
+         </div><br>=20
+         <div>
+           Please add images, screenshots or videos to it, if possible. Be =
+as detailed as possible.=20
+         </div></span>=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Kamaluddeen</span><span style=3D"display: inline-blo=
+ck; margin: 0 5px">[11:24 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">=20
+         <div>
+           pls can you give me a chance to do the soft skills challenge aga=
+in i wasnt able to complete it due to some unforseeable circumstance. I sta=
+rted it but was called away i also applied for the mistral AI and python de=
+veloper job, i completed all turing coding challenges and also updated my t=
+uring profile. I would be really grateful if you could assist me with this.=
+ Looking forward to hearing from you Thank you very much=20
+         </div></span>=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Kamaluddeen</span><span style=3D"display: inline-blo=
+ck; margin: 0 5px">[11:24 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">[[Shared =
+a file]]</span>=20
+       </div>=20
+       <div style=3D"display: flex">=20
+        <span style=3D"flex-shrink: 0; min-width: min-content;"> <span styl=
+e=3D"font-weight: 600">Alan</span><span style=3D"display: inline-block; mar=
+gin: 0 5px">[11:24 PM]:</span> </span>=20
+        <span style=3D"display: inline-block; vertical-align:top">=20
+         <div>
+           Thank you,=20
+          <strong>your ticket has been created!</strong>=20
+         </div><br>=20
+         <div>
+           We'll get back to you=20
+          <u>in the next 24 hours within weekdays.</u>=20
+          <u><strong>Please don't generate another chat or ticket about the=
+ same issue</strong></u>.=20
+         </div><br>=20
+         <div>=20
+          <strong>And please <u>don't fill out our feedback survey yet</u>,=
+ </strong> Once we have addressed your case,=20
+          <strong><u>we will reopen this conversation to gather your valuab=
+le feedback. :) </u></strong>=20
+         </div><br></span>=20
+       </div>=20
+      </div>=20
+     </blockquote>=20
+    </div>=20
+   </div>=20
+  </div>
+=20
+<img width=3D"1" height=3D"1" style=3D"display:none" alt=3D"" src=3D"https:=
+//d2V4Zp04.na1.hs-service-engage.com/Cto/I9+23284/d2V4Zp04/R5X8b49_pN7HrKqX=
+2fDsqW3z9xXl1Zm3BNW1VnkFS1XmK6jW1Gc-FF1WZjxpW3GJbkw24X1LSW3z8F0S1N7bBPN1S2c=
+hXhPQ-6f8_4Fgn04"></body></html>
+------=_Part_115228_1146507378.1721978957110--
+

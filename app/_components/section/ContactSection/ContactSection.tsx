@@ -9,13 +9,13 @@ const ContactSection = () => {
     email: "",
     phone: "",
   });
-
+  
   const [errors, setErrors] = useState({
     name: "",
     email: "",
     phone: "",
   });
-
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // success or error
