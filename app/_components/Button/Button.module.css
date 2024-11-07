@@ -1,5 +1,5 @@
 .button {
-  background: var(--blue-color);
+  background: var(--red-color);
   padding: 16px 36px 16px 36px;
   color: #fff;
   border-radius: 80px;
@@ -14,7 +14,7 @@
   background-color: #fff;
   border-radius: 80px;
   gap: 12px;
-  color: var(--blue-color);
+  color: var(--red-color);
   padding: 16px 36px 16px 36px;
   cursor: pointer;
 }

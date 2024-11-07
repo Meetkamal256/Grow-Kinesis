@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-bottom: 80px;
+  margin: 0 auto 80px auto;
 }
 
 .programTitle {
@@ -15,7 +15,7 @@
 }
 
 .programSpan {
-  color: var(--blue-color);
+  color: var(--red-color);
 }
 
 /* Responsive for small laptops (1024px - 1280px) */

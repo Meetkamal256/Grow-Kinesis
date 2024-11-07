@@ -9,7 +9,7 @@
 }
 
 .sectionSpan {
-  color: var(--blue-color);
+  color: var(--red-color);
 }
 
 .sectionParagraph {
@@ -20,6 +20,7 @@
   letter-spacing: -1px;
   text-align: center;
   margin-bottom: 64px;
+  
 }
 
 .testimonialsContainer {
@@ -87,7 +88,7 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: var(--blue-color);
+  color: var(--red-color);
   margin-bottom: 12px;
 }
 

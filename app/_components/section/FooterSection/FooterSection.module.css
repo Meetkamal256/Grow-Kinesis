@@ -52,7 +52,7 @@
   line-height: 36px;
   letter-spacing: -1px;
   text-align: left;
-  color: var(--blue-color);
+  color: var(--red-color);
   text-decoration: underline;
 }
 
@@ -149,6 +149,6 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: -0.20000000298023224px;
-    color: var(--blue-color);
+    color: var(--red-color);
   }
 }

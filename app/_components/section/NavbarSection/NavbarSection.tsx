@@ -8,14 +8,14 @@ export const Navbar = () => {
       <div className={styles.logoContainer}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/images/logo.png"
+            src="/images/logomark.svg"
             alt="Logo Shape"
             width={45.95}
             height={45.95}
             className={styles.logoImage}
           />
           <Image
-            src="/images/letters.png"
+            src="/images/letters.svg"
             alt="Logo Text"
             width={138.59}
             height={17.08}
