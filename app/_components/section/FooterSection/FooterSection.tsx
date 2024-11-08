@@ -24,6 +24,7 @@ const Footer = () => {
           />
         </Link>
       </div>
+      
       <div className={styles.footerContent}>
         <p className={styles.copyright}>
           Copyright © Grow Kinesis 2024. All Rights Reserved.

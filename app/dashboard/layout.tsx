@@ -1,6 +1,7 @@
 import AdminNavbar from "../_components/AdminNavbar/AdminNavbar";
 import Sidebar from "../_components/Sidebar/Sidebar";
 import styles from "./dashboard.module.css";
+import "../_components/Sidebar/sidebar.module.css"
 
 export default function DashboardLayout({
   children,

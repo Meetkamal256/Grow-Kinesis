@@ -1,5 +1,7 @@
 .container {
   display: flex;
+  background: #FDE3E9;
+
 }
 
 .menu {
