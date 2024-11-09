@@ -1,0 +1,54 @@
+.container {
+  padding: 20px;
+  height: 100%;
+  background: #fde3e9;
+}
+
+.container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+/* Responsive layout for medium screens (tablets and small desktops) */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive layout for smaller screens (portrait tablets, large phones) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container h1 {
+    font-size: 25px;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
